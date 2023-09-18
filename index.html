@@ -12,12 +12,17 @@
 <body>
     <h1 id="heading">Generate a <span id="green-text">random password</span></h1>
     <h4 id="sub-heading">Never use an insecure password again.</h4>
-    <button>Generate passwords</button>
+    <div id="set-password-length">Optional: Set the length of your password:  <input type="'text" id="password-length"></div>
+    <div id="no-numbers-div"><input type="checkbox" id="no-numbers" name="no-numbers" value="without-numbers">Without Numbers</div>
+    <div id="no-symbols-div"><input type="checkbox" id="no-symbols" name="no-symbols" value="without-symbols">Without Symbols </div>    
+    <button onclick="generateRandomPassword()">Generate passwords</button>
     <hr id="horizental-line">
     <div id="result">
-        <p id="left-result"></p>
-        <p></p>
+        <p class="result" id="left-result" onclick="copyTextLeft()"></p>
+        <p class="result" id="right-result" onclick="copyTextRight()"></p>
     </div>
+    <div id="copiedLeft"></div>
+    <div id="copiedRight"></div>
     
     <script src="index.js"></script>
 </body>
